@@ -13,6 +13,7 @@ public class Server {
 
    public static void main(String[] args) throws RemoteException, AlreadyBoundException, InterruptedException {
 
+       System.setProperty("java.rmi.server.hostname","192.168.2.63");
        final RemoteHandler server = new RemoteHandler();
 
        final Registry registry = LocateRegistry.createRegistry(2732);

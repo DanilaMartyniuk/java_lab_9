@@ -12,11 +12,9 @@ public class Client {
 
    public static void main(String[] args) throws RemoteException, NotBoundException {
 
-       final Registry registry = LocateRegistry.getRegistry(2732);
+       final Registry registry = LocateRegistry.getRegistry("192.168.2.63",2732);
 
        Handler handler = (Handler) registry.lookup(UNIQUE_BINDING_NAME);
-
-       
        System.out.println("Enter username");
        Scanner input = new Scanner(System.in);
        String username = input.nextLine();
